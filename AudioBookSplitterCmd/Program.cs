@@ -57,8 +57,8 @@ namespace AudioBookSplitterCmd
                     var serializedOutput = JsonConvert.DeserializeObject<ffprobeOutput.RootObject>(output);
                     var chapters = serializedOutput.Chapters;
                     var formatDescriptions = serializedOutput.Format;
-
-                    var folder = $"{formatDescriptions.Tags.AlbumArtist.ToFilePathSafeString()}\\{formatDescriptions.Tags.Date.ToFilePathSafeString()} - {formatDescriptions.Tags.Album.ToFilePathSafeString()}";
+                    var number = (formatDescriptions.Tags.Disc ?? formatDescriptions.Tags.Date).ToFilePathSafeString();
+                    var folder = $"{formatDescriptions.Tags.AlbumArtist.ToFilePathSafeString()}\\{formatDescriptions.Tags.Album.ToFilePathSafeString()}\\{number} - {formatDescriptions.Tags.Title.ToFilePathSafeString()}";
 
                     if (!string.IsNullOrEmpty(parsedResult.OutputFolder))
                     {
@@ -86,10 +86,10 @@ namespace AudioBookSplitterCmd
                         // To add artist as ID3 tag
                         arguments += $"-metadata artist=\"{formatDescriptions.Tags.Artist}\" ";
                         // To add chapter title as mp3 title ID3 tag
-                        arguments += $"-metadata title=\"{chapter.Tags.Title}\" ";
+                        arguments += $"-metadata title=\"{formatDescriptions.Tags.Title} - {chapter.Tags.Title}\" ";
                         // To add track number title as ID3 tag
                         arguments += $"-metadata track={track} \"{target}\"";
-                        Console.WriteLine($"Extracting '{track:D2} - {chapter.Tags.Title}' from '{formatDescriptions.Tags.Album}'");
+                        Console.WriteLine($"Extracting {track}/{chapters.Length}: '{track:D2} - {chapter.Tags.Title}' from '{formatDescriptions.Tags.Album}'");
                         var pExtract = new Process
                         {
                             StartInfo =

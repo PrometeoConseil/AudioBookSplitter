@@ -45,5 +45,8 @@ namespace AudioBookSplitterCmd.ffprobeOutput
 
         [JsonProperty(PropertyName = "date")]
         public string Date { get; set; }
+
+        [JsonProperty(PropertyName = "disc")]
+        public string Disc { get; set; }
     }
 }
