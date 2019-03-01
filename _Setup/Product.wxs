@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?define ProductName = "Prometeo Audiobook splitter" ?>
+<?define ProductAuthor = "Prometeo" ?>
+<?define ProductAppFolder = "InstallLocation" ?>
+
+<?if $(var.Platform) = x64 ?>
+<?define ProductDisplayName = "$(var.ProductName) 64-bit" ?>
+<?define ProductId = "*" ?>
+<?define ProductUpgradeCode = "6b5cd58c-ab57-4080-830f-b2677b31551a" ?>
+<?define Win64 = "yes" ?>
+<?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+<?define WindowsSystemFolder = "System64Folder" ?>
+<?else ?>
+<?define ProductDisplayName = "$(var.ProductName)" ?>
+<?define ProductId = "*" ?>
+<?define ProductUpgradeCode = "3E9FE1D4-6EFE-4FB1-8F42-90354B23B03A" ?>
+<?define Win64 = "no" ?>
+<?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+<?define WindowsSystemFolder = "SystemFolder" ?>
+<?endif ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="$(var.ProductId)"
+           Name="$(var.ProductDisplayName) (v$(var.ShortAssyVersion))"
+           Language="1033"
+           Version="!(bind.FileVersion.AudioBookSplitterCmdExe)"
+           Manufacturer="$(var.ProductAuthor)"
+           UpgradeCode="$(var.ProductUpgradeCode)">
+    <Package InstallerVersion="300" Compressed="yes" InstallScope="perMachine"  
+             Manufacturer="$(var.ProductAuthor)" Platform="$(var.Platform)" 
+             Description="Install the $(var.ProductDisplayName) (v$(var.ShortAssyVersion))" />
+
+    <MajorUpgrade AllowDowngrades="no" Schedule="afterInstallFinalize" MigrateFeatures="yes"
+                  DowngradeErrorMessage="A later or current version of $(var.ProductDisplayName) is already installed. To install this version, uninstall the installed version first."/>
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <WixVariable Id="WixUIDialogBmp" Value="DialogBox.jpg" />
+    <WixVariable Id="WixUIBannerBmp" Value="TopBanner.jpg" />   
+    <Icon Id="Ico" SourceFile="AudioBookSplitter.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="Ico" />
+    <Property Id="ARPHELPLINK" Value="http://www.prometeo.fr"/>
+    <Property Id="ARPURLINFOABOUT" Value="http://www.prometeo.fr"/>
+
+		<Feature Id="ProductFeature" Title="$(var.ProductDisplayName) Setup" Level="1">
+      <ComponentGroupRef Id="MainExeComponent"/>
+      <?if $(var.Platform) = x64 ?>
+      <ComponentGroupRef Id="ProductFilesComponentx64" />
+      <?else ?>
+      <ComponentGroupRef Id="ProductFilesComponent" />
+      <?endif ?>
+		</Feature>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONFOLDER" />
+    <UI>
+      <UIRef Id="WixUI_InstallDir" />
+
+      <!-- Skip license dialog -->
+      <Publish Dialog="WelcomeDlg"
+               Control="Next"
+               Event="NewDialog"
+               Value="InstallDirDlg"
+               Order="2">1</Publish>
+      <Publish Dialog="InstallDirDlg"
+               Control="Back"
+               Event="NewDialog"
+               Value="WelcomeDlg"
+               Order="2">1</Publish>
+    </UI>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="$(var.PlatformProgramFilesFolder)" >
+        <Directory Id="COMPANYFOLDER" Name="$(var.ProductAuthor)">
+          <Directory Id="APPLICATIONFOLDER" Name="$(var.ProductName)">
+          </Directory>
+        </Directory>
+      </Directory>
+		</Directory>
+	</Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="MainExeComponent" >
+      <Component Id="AudioBookSplitterCmdComponent" Directory="APPLICATIONFOLDER" Guid="*" Win64="$(var.Win64)">
+        <File Id="AudioBookSplitterCmdExe" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\AudioBookSplitterCmd.exe" />
+        <File Id="AudioBookSplitterCmdExeConfig" Source="$(var.AudioBookSplitterCmd.TargetDir)\AudioBookSplitterCmd.exe.Config" />
+      </Component>
+      </ComponentGroup>
+  </Fragment>
+</Wix>

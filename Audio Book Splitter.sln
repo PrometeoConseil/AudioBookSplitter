@@ -5,16 +5,32 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioBookSplitterCmd", "AudioBookSplitterCmd\AudioBookSplitterCmd.csproj", "{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}"
 EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "_Setup", "_Setup\_Setup.wixproj", "{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|x64.ActiveCfg = Debug|x64
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|x64.Build.0 = Debug|x64
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|x86.ActiveCfg = Debug|x86
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Debug|x86.Build.0 = Debug|x86
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|x64.ActiveCfg = Release|x64
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|x64.Build.0 = Release|x64
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|x86.ActiveCfg = Release|x86
+		{E600A1DE-4F6C-4530-9BB2-1D94148F71BA}.Release|x86.Build.0 = Release|x86
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Debug|x64.ActiveCfg = Debug|x64
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Debug|x64.Build.0 = Debug|x64
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Debug|x86.ActiveCfg = Debug|x86
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Debug|x86.Build.0 = Debug|x86
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Release|x64.ActiveCfg = Release|x64
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Release|x64.Build.0 = Release|x64
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Release|x86.ActiveCfg = Release|x86
+		{36CD2FFE-9F19-4AE0-9272-377BB42B6A7B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

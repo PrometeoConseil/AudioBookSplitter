@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>36cd2ffe-9f19-4ae0-9272-377bb42b6a7b</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>AudioBookSplitter Setup</OutputName>
+    <OutputType>Package</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <Compile Include="ProductInstallFiles.wxs" />
+    <Compile Include="ProductInstallFilesx64.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioBookSplitterCmd\AudioBookSplitterCmd.csproj">
+      <Name>AudioBookSplitterCmd</Name>
+      <Project>{e600a1de-4f6c-4530-9bb2-1d94148f71ba}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>
+      </DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AudioBookSplitter.ico" />
+    <Content Include="ExcludeMainExex64.xslt" />
+    <Content Include="DialogBox.jpg" />
+    <Content Include="ExcludeMainExe.xslt" />
+    <Content Include="TopBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixTargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+  </Target>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <Target Name="BeforeBuild">
+    <HeatDirectory OutputFile="$(ProjectDir)\ProductInstallFiles.wxs" Transforms="ExcludeMainExe.xslt" Directory="..\AudioBookSplitterCmd\bin\$(Platform)\$(Configuration)\" ComponentGroupName="ProductFilesComponent" DirectoryRefId="APPLICATIONFOLDER" AutogenerateGuids="true" PreprocessorVariable="var.AudioBookSplitterCmd.TargetDir" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WixToolPath)" NoLogo="true" />
+    <HeatDirectory OutputFile="$(ProjectDir)\ProductInstallFilesx64.wxs" Transforms="ExcludeMainExex64.xslt" Directory="..\AudioBookSplitterCmd\bin\$(Platform)\$(Configuration)\" ComponentGroupName="ProductFilesComponentx64" DirectoryRefId="APPLICATIONFOLDER" AutogenerateGuids="true" PreprocessorVariable="var.AudioBookSplitterCmd.TargetDir" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WixToolPath)" NoLogo="true" />
+    <GetAssemblyIdentity AssemblyFiles="$(SolutionDir)AudioBookSplitterCmd\bin\$(Platform)\$(Configuration)\AudioBookSplitterCmd.exe">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
+    </GetAssemblyIdentity>
+    <CreateProperty Value="%(AssemblyVersion.Version)">
+      <Output TaskParameter="Value" PropertyName="AssyVersion" />
+    </CreateProperty>
+    <CreateProperty Value="$(AssyVersion.Split('.')[0]).$(AssyVersion.Split('.')[1])">
+      <Output TaskParameter="Value" PropertyName="ShortAssyVersion" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);LongAssyVersion=$(AssyVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);ShortAssyVersion=$(ShortAssyVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+  </Target>
+  <Target Name="AfterBuild">
+    <GetAssemblyIdentity AssemblyFiles="$(SolutionDir)AudioBookSplitterCmd\bin\$(Platform)\$(Configuration)\AudioBookSplitterCmd.exe">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
+    </GetAssemblyIdentity>
+    <CreateProperty Value="%(AssemblyVersion.Version)">
+      <Output TaskParameter="Value" PropertyName="AssyVersion" />
+    </CreateProperty>
+    <CreateProperty Value="$(AssyVersion.Split('.')[0]).$(AssyVersion.Split('.')[1])">
+      <Output TaskParameter="Value" PropertyName="ShortAssyVersion" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);LongAssyVersion=$(AssyVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <CreateProperty Value="$(DefineConstants);ShortAssyVersion=$(ShortAssyVersion)">
+      <Output TaskParameter="Value" PropertyName="DefineConstants" />
+    </CreateProperty>
+    <!--<Copy SourceFiles=".\bin\$(Configuration)\$(OutputName).msi" DestinationFiles=".\bin\$(Configuration)\$(OutputName) ($(PlatformName)) v$(ShortAssyVersion).msi" />-->
+    <Copy SourceFiles=".\bin\$(Platform)\$(Configuration)\$(OutputName).msi" DestinationFiles="..\Publish\$(OutputName) $(ShortAssyVersion) ($(PlatformName)).msi" />
+    <!--<Delete Files=".\bin\$(Configuration)\$(OutputName).msi" />-->
+  </Target>
+</Project>
