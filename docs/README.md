@@ -120,3 +120,8 @@ Press any key to exit the program.
 
 # Build
 Open the ```Audio Book Splitter.sln``` file with VisualSudio and Build the solution.
+
+# Third-party modules
+1. [CommandLineParser](https://github.com/commandlineparser/commandline) - [Licence](https://github.com/commandlineparser/commandline/blob/master/License.md)
+2. [Humanizer](https://github.com/Humanizr/Humanizer) - [Licence](https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
+3. [Newtonsoft.Json](https://www.newtonsoft.com/json) - [Licence](https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md)
