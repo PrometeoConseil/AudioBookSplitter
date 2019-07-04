@@ -125,3 +125,4 @@ Open the ```Audio Book Splitter.sln``` file with VisualSudio and Build the solut
 1. [CommandLineParser](https://github.com/commandlineparser/commandline) - [Licence](https://github.com/commandlineparser/commandline/blob/master/License.md)
 2. [Humanizer](https://github.com/Humanizr/Humanizer) - [Licence](https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
 3. [Newtonsoft.Json](https://www.newtonsoft.com/json) - [Licence](https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md)
+4. [ffmpeg and ffprobe](https://github.com/FFmpeg/FFmpeg) - [Licence](https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md)
