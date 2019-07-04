@@ -9,5 +9,8 @@ namespace AudioBookSplitterCmd
 
         [Option('o', "Output", HelpText = "The folder where the files will be stored.")]
         public string  OutputFolder { get; set; }
+
+        [Option('p', "PreferShortTargetFolder",Default = false, HelpText = "No track chapter metadata will be added to output folder name.")]
+        public bool PreferShortTargetFolder { get; set; }
     }
 }

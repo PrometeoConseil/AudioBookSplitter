@@ -77,6 +77,8 @@ namespace AudioBookSplitterCmd
                     var formatDescriptions = serializedOutput.Format;
                     var number = (formatDescriptions.Tags.Disc ?? formatDescriptions.Tags.Date).ToFilePathSafeString();
                     var folder = $"{formatDescriptions.Tags.AlbumArtist.ToFilePathSafeString()}\\{formatDescriptions.Tags.Album.ToFilePathSafeString()}\\{number} - {formatDescriptions.Tags.Title.ToFilePathSafeString()}";
+                    if (parsedResult.PreferShortTargetFolder)
+                        folder = "";
 
                     if (!string.IsNullOrEmpty(parsedResult.OutputFolder))
                     {
@@ -90,6 +92,7 @@ namespace AudioBookSplitterCmd
                     foreach (var chapter in chapters)
                     {
                         track++;
+                        Console.WriteLine($"Trying to create \"{track:D2} - {chapter.Tags.Title}.mp3\" into folder \"{folder}\"");
                         var target = Path.Combine(folder, $"{track:D2} - {chapter.Tags.Title}.mp3".ToFilePathSafeString());
                         
                         // remove existing file
