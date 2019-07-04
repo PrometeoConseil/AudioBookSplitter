@@ -117,3 +117,6 @@ frame=    0 fps=0.0 q=0.0 Lsize=   31051kB time=01:06:14.29 bitrate=  64.0kbits/
 Press any key to exit the program.
 
 ```
+
+# Build
+Open the ```Audio Book Splitter.sln``` file with VisualSudio and Build the solution.
