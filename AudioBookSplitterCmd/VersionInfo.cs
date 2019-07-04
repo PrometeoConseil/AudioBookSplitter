@@ -2,7 +2,7 @@
 
 [assembly: AssemblyCompany("Prometeo")]
 [assembly: AssemblyProduct("AudioBook Splitter")]
-[assembly: AssemblyCopyright("Copyright © 2019 Prometeo")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 
 [assembly: AssemblyVersion("1.1.81.7000")]

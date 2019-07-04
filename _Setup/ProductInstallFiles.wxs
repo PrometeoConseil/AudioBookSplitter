@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER" />
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ProductFilesComponent">
+            <Component Id="cmpB0604D8C332B965ED6CD963B73BAB840" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filF7EB1F09E301AE3530961B585B183B3A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\AudioBookSplitterCmd.pdb" />
+            </Component>
+            <Component Id="cmp6D7FAF06BD62B5E7241008F7578C1335" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filB33C7B30400D081F4CDC9E40DB0B3809" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\CommandLine.dll" />
+            </Component>
+            <Component Id="cmp4D5AB147051970BD9987BC33CD965195" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil0D29E5E6344C33A1C4EAB319C5507510" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\CommandLine.xml" />
+            </Component>
+            <Component Id="cmp6553266C7AAA9CC001DD9EF8F7A96F04" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil1CADD04CEE5FEA8BD0066B14725497B7" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\ffmpeg.exe" />
+            </Component>
+            <Component Id="cmp7A55EDFA7CC49C140F461908C980CCDE" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filBD4E1AD14615D4ED048F4A4F4B994F7C" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\ffprobe.exe" />
+            </Component>
+            <Component Id="cmp54F41FBCF6338394DFE3CC7FD1CD28BF" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil1E9150CE4045697D568A61008A83DDF8" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Humanizer.dll" />
+            </Component>
+            <Component Id="cmp80DF982C7F8241D9717897F2A1DA5885" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil37412DC63E17FB7480E638B1448B6CEB" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Humanizer.xml" />
+            </Component>
+            <Component Id="cmp938B245945F93CCA4235E26D774ADBC8" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD766B010630016E418057095DA21D9ED" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Microsoft.Win32.Primitives.dll" />
+            </Component>
+            <Component Id="cmpCA21DD78CFF4BB995D0098B819C4EBEA" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil719250929C621004F0BAD198E3A6A262" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\netstandard.dll" />
+            </Component>
+            <Component Id="cmp4CDF7DFD2D0E95016925C6786A10C503" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil58078AD85E0073F162CFFABD8ECDFD92" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp01ADE970C0512E42DF85A9B0EABD9E16" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil193A96144A1552E449975FEEBA53DE07" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Newtonsoft.Json.pdb" />
+            </Component>
+            <Component Id="cmpEC5CA923F382FAC50F6D948F86E329B2" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil59800B0773DA93236D44CAFE982940CE" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmpE9F0095CDD97DC90A5BF9AA8CCC51FDC" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil3CE3213428AC52B55D9529A8BBFEF39F" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.AppContext.dll" />
+            </Component>
+            <Component Id="cmp0DA8A8E959DFB490FEBF13194765A593" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil935E021A7ACC47AC7AA78C680C438E0D" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Collections.Concurrent.dll" />
+            </Component>
+            <Component Id="cmp3775DA016437F198EA88CAFA9ABE5F48" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil485EF8D982D4CBBF18E9F502313D9F88" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Collections.dll" />
+            </Component>
+            <Component Id="cmpA2DC0028A3A72AFE69BA1E6855DE0889" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil4732DAD99F63931F8415BA02A8A23900" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Collections.NonGeneric.dll" />
+            </Component>
+            <Component Id="cmp398DDEBB0CC245D14A87A09C938B7BB9" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil11D0CD08C5ACB1403EEE74C4551199C4" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Collections.Specialized.dll" />
+            </Component>
+            <Component Id="cmp47219A1151020F385D0570EFDDE8075D" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7040959E99292C8AEE402750A53A4A65" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ComponentModel.dll" />
+            </Component>
+            <Component Id="cmpAF1F355E907B061AA88DA7026680850C" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD84A2D20D7CB8312C5281CF7B5131463" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ComponentModel.EventBasedAsync.dll" />
+            </Component>
+            <Component Id="cmpE8C052A2EE22FBFB7DC85513EC9C5109" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA666D94E7907F8F9F079029F54FE5783" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ComponentModel.Primitives.dll" />
+            </Component>
+            <Component Id="cmp22CEE7114B62BE44FEE37434628A4FAD" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filBC19A9CA74CC8F4C05135663FF09A53E" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ComponentModel.TypeConverter.dll" />
+            </Component>
+            <Component Id="cmp94F14FF3853780DB37319D92FCC590A6" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil8B16D5E43B2718B4FBE87BE462C7F697" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Console.dll" />
+            </Component>
+            <Component Id="cmp6E2E05D84A6AEC1B043E5BE851CA3060" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filEA073FA978C4020B215FC1D22717FFB7" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Data.Common.dll" />
+            </Component>
+            <Component Id="cmp520C374F6A88133349E429D2845D499C" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6B93FBE21ACCCA84E392FAA7B6A4773A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.Contracts.dll" />
+            </Component>
+            <Component Id="cmp4FFC45184866861E8731BA77CA74C587" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6972A2A26DA18A7B0FE074D38C25C79F" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.Debug.dll" />
+            </Component>
+            <Component Id="cmp86155697564434898205E5793C05C6F4" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil23B9345E3B0FF8EEDF4AA77D76997CC9" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.FileVersionInfo.dll" />
+            </Component>
+            <Component Id="cmpE09CB1AEA8215B2D2562E36C089CDCCD" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil792C69CFC99D5A8666E8033C5ECFB709" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.Process.dll" />
+            </Component>
+            <Component Id="cmpFC2CE3EF36D3C87602C818EABB9EFF55" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7192CE3266B2EE1677AD3C72ECC7779A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.StackTrace.dll" />
+            </Component>
+            <Component Id="cmp8A3864CB03B4812296AFF0970E85753E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filE1C0A9A3E84CD3112D11331FF65C2715" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.TextWriterTraceListener.dll" />
+            </Component>
+            <Component Id="cmp415A94D2C654750F9C3CFACFBE001429" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA0320FF8ECCA8C5BB829253F1E8C613D" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.Tools.dll" />
+            </Component>
+            <Component Id="cmp24A23A4F76E58EB5C2C7FECFC7D27D4E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil4523998508E4421323F599FEC473AB28" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.TraceSource.dll" />
+            </Component>
+            <Component Id="cmp18F0D13D5FFB1E11A654A34B57600106" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA7127C43ECECF1517A93370CD289BAE9" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Diagnostics.Tracing.dll" />
+            </Component>
+            <Component Id="cmp5EAC3CE3E4F55BFBA184AE861AAFF810" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil9D05AC99BD72D46496F0517AE7B53EA7" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Drawing.Primitives.dll" />
+            </Component>
+            <Component Id="cmpFE365BAC7C172389D6B2DC4A1BB516A9" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filF1442CBA31FFC8D09510FC5D89517111" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Dynamic.Runtime.dll" />
+            </Component>
+            <Component Id="cmp54E8DBC127FBBECB79E358EB8194961A" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filE25C324BC2A39C9F7B0A19B6394D0059" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Globalization.Calendars.dll" />
+            </Component>
+            <Component Id="cmpB9D30F95248B649EF95C5F3EADDB508D" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filB2FC7F3A97DCEC9368029708BBA17D7A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Globalization.dll" />
+            </Component>
+            <Component Id="cmp5A5E94DD3E23779BF59A654BD12D303E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil63D148DD3B2AD3FC9884A8A8A9C5FF3B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Globalization.Extensions.dll" />
+            </Component>
+            <Component Id="cmp9584858258F77DC18637F96D3BA8AEBF" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil8178CA81E8F46DA9A78288C145627D5A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.Compression.dll" />
+            </Component>
+            <Component Id="cmp0263352E0EA344FFA0DF14A41553B38E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil264BF739E689BC6CB7A2F9EE7116CC62" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.Compression.ZipFile.dll" />
+            </Component>
+            <Component Id="cmpB9EBD7874B665740BC7E808EA37DC766" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filEF2D875C9FD82C2DD05BC83D3674E56A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.dll" />
+            </Component>
+            <Component Id="cmp6E1F0D288C9FFD6913B3CBB54F586E8A" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil2B1A760D29053732CE21D36FE7B92A7B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.FileSystem.dll" />
+            </Component>
+            <Component Id="cmp2729D19EC8460E89C0F9A7C2E40C5AF2" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filED5CD3DBBDD988B35578050F9ADABA87" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.FileSystem.DriveInfo.dll" />
+            </Component>
+            <Component Id="cmpDAB412D2316A823820F9F62316E5DEBE" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filFC733B56A54852933504852235841689" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.FileSystem.Primitives.dll" />
+            </Component>
+            <Component Id="cmp56B4AC793D32E81EDAB19B53B25F2185" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filC6692DA485C9358FCDB2B0C11A2DE2EC" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.FileSystem.Watcher.dll" />
+            </Component>
+            <Component Id="cmp019CD9C99F9B90422B4A56FE85BE3D8C" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7ECE62F9339F4C1986B3CC7F57B96044" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.IsolatedStorage.dll" />
+            </Component>
+            <Component Id="cmp883BACDC46253A682C2601644AF88726" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil22B80615B99593C92BA1AA260A64CC72" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.MemoryMappedFiles.dll" />
+            </Component>
+            <Component Id="cmp053029B2D4D01001896AC0AB4F0BF26F" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6C2C8C16AA2BB2058F1D1AE7B4497D90" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.Pipes.dll" />
+            </Component>
+            <Component Id="cmp0C87765FAC064A3F90EACF2C6CF3E999" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil2A8B8688A7BD25306C78AB56292205DC" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.IO.UnmanagedMemoryStream.dll" />
+            </Component>
+            <Component Id="cmp2C4904B9FAC0136B95EEB628954F9E54" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil2F02DFE946752CF2A1E390444F75DB62" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Linq.dll" />
+            </Component>
+            <Component Id="cmpBD869DBDD17C11E55B5C8569DB13B748" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil78DA2A05A49D38C61C95D9F940D16243" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Linq.Expressions.dll" />
+            </Component>
+            <Component Id="cmp99ABBB6D9EF1C30D8C6F2A3DB8FBE6D2" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD442185A12D731B281810EC4593A5011" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Linq.Parallel.dll" />
+            </Component>
+            <Component Id="cmp98B089294DA75FCF6DA06BE5746AA797" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filE5CB495B6E9A7E08CA9BBAD5322A312E" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Linq.Queryable.dll" />
+            </Component>
+            <Component Id="cmpF5E8BFFDAFE970F31DAEBC49D1EF31F4" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil69139AFCE017A9A89A8801F8F99CDAAB" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Http.dll" />
+            </Component>
+            <Component Id="cmp24910D614E597C0E455B6552CD844D0C" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filCDDC0027521A64A7FF75A9EE34C64D67" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.NameResolution.dll" />
+            </Component>
+            <Component Id="cmp3FA9343ABC1E6D27C266C3AB0BF78990" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil090871ECC7B7E0B9790C2028AEB2B916" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.NetworkInformation.dll" />
+            </Component>
+            <Component Id="cmp2D1C139EB42DE9EEE1488CF98E2F3671" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil9C19586F77DF6F1E5CF6DF4017514029" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Ping.dll" />
+            </Component>
+            <Component Id="cmp8F96575EF6E1BB78C2B3D987B4FBACC8" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil3C7703342A052215D2344F68A659D9B0" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Primitives.dll" />
+            </Component>
+            <Component Id="cmp0C9F1D6D3EFB9760F31D14EBC4EA1E9B" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD51B3CC34E04C5792BCE6E530EBB16F7" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Requests.dll" />
+            </Component>
+            <Component Id="cmpF8F95D0C7F9958E0B98A40569A6A7DBE" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filF16104BA38D2DAAE9A638AA812B05FDE" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Security.dll" />
+            </Component>
+            <Component Id="cmpCD5EEF24BA56A58DDFB725CC7037066E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filBC343F9D255FA19F26816EE1D248E063" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.Sockets.dll" />
+            </Component>
+            <Component Id="cmpDA734468461AC205BBE9A1B3926A2446" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filE031FEE2BA615B95359079A5E62A4625" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.WebHeaderCollection.dll" />
+            </Component>
+            <Component Id="cmp1EB1D6140932A65D202697DE85F836E4" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil110E5137322E4755FA94797AB22F7AD7" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.WebSockets.Client.dll" />
+            </Component>
+            <Component Id="cmp78CE505878D26D6271CB80507A15330D" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil412E2D2B5B1E2951A9135A31C4BF1C2E" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Net.WebSockets.dll" />
+            </Component>
+            <Component Id="cmpB0DCE59C1800E637BCFD6556B82564D6" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA475FA6CE43D39C8B909D78B9E83D851" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ObjectModel.dll" />
+            </Component>
+            <Component Id="cmp2D02FEDD720A986EF30D26DC67247E43" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filFF239AB90B4225585A416AAE792907DE" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Reflection.dll" />
+            </Component>
+            <Component Id="cmp4D00008DB8EBE84E6F0AD6EE2407F470" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD4CE68BB98F2D9DE3730BA44F6BCE704" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Reflection.Extensions.dll" />
+            </Component>
+            <Component Id="cmp13E64A3CA4ADDE0691AC9C3F4DFEEC2B" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filC5BCC988B18CCC2E4FE052454D7D431F" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Reflection.Primitives.dll" />
+            </Component>
+            <Component Id="cmpBC2720CABA8D9FC358224DCE260F0E9A" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil9059FF0BE4DCDE171E554CA254B4932B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Resources.Reader.dll" />
+            </Component>
+            <Component Id="cmp0BA35E4182DCE7DDD2B75B4DDED34380" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil8C0B7D81EA075A7989071E55788C4E17" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Resources.ResourceManager.dll" />
+            </Component>
+            <Component Id="cmp546F41E0FE7347034376BB37566DD6EE" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6995DD817F2918F463A8AAA366712EB3" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Resources.Writer.dll" />
+            </Component>
+            <Component Id="cmp5C5C512B9C817470CDECFE60204CE621" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filF73246925E3ECD2E1BC543D7D2470821" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.CompilerServices.VisualC.dll" />
+            </Component>
+            <Component Id="cmp5D1E16FF39C8B3CF723FD7619A96B75E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil35B2395B0966474D22220C59F958108D" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.dll" />
+            </Component>
+            <Component Id="cmp24918AF9B56AE140350D3C668EACCE64" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filCCEB533F614E76C1BB861973D09C9EBA" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Extensions.dll" />
+            </Component>
+            <Component Id="cmp773F2C3D991D50E728F9CAD970C731FD" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil51C57C7BE083610532998B09129CFC8B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Handles.dll" />
+            </Component>
+            <Component Id="cmp35A85BBFBB4D568579E7235F626EAB50" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filDC2959A146046A4AE40A70B56CA1E8E0" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.InteropServices.dll" />
+            </Component>
+            <Component Id="cmp82BB6CAE27DB9268DF6A1715ED6A7074" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil1ADBFE17C7337081DC87840581D3F5D2" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.InteropServices.RuntimeInformation.dll" />
+            </Component>
+            <Component Id="cmpC6E0C7A259CEB6BF97E937A1FCCA43BA" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil130AA5F1B2BEA19DE6A9AC5214A76345" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Numerics.dll" />
+            </Component>
+            <Component Id="cmpF47E184B6D230820DADE832BEFA0CD54" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filCFF73F1F313C4B3FCB5A3DF7B871F979" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Serialization.Formatters.dll" />
+            </Component>
+            <Component Id="cmp014BF2C7DB44AF8DFDF1D82191FA1969" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil4E04E6EECE58CC0EB52FF91D50263817" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Serialization.Json.dll" />
+            </Component>
+            <Component Id="cmpFE110F0EF93DD3DD0E8E53AF2BFDD2A7" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil2191F23906550D750DF02041886E1512" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Serialization.Primitives.dll" />
+            </Component>
+            <Component Id="cmp6F0020CD3D8737D156E18865295145D5" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6D85643B4D2DF2A98F1BFD96A8668C15" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Runtime.Serialization.Xml.dll" />
+            </Component>
+            <Component Id="cmpE7BDA642A0159C88A3567C5A5CAC1E02" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA1A282A52C31B4A9DDCF7EF7613FCF54" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Claims.dll" />
+            </Component>
+            <Component Id="cmpEB6188F630878E1015EE86596B094B9F" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil6012E7A2A0133F9AD29D5B7A5E27B671" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Cryptography.Algorithms.dll" />
+            </Component>
+            <Component Id="cmpDD74C9818EDC3D0CEE639C6E25698022" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filC35646F862303D3D27D972D16092DD19" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Cryptography.Csp.dll" />
+            </Component>
+            <Component Id="cmp73BC212FF3FCA0662FAA3BD1374348FD" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filC0CD9513E1D9266641503848FDC1145F" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Cryptography.Encoding.dll" />
+            </Component>
+            <Component Id="cmp8F013ECE72C828E5D4072393CA41235E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil2FD054B281C06BADE0D2A4937C8BF66B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Cryptography.Primitives.dll" />
+            </Component>
+            <Component Id="cmp7773B2C693B2EF29810FFF4B549FFC36" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil77D9CF9236427C5786DBFB6933D4AA0F" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Cryptography.X509Certificates.dll" />
+            </Component>
+            <Component Id="cmp716B36FD985249EA18BCD07D9B4BC601" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filB530DEC7C9BE5452B228689067FD985C" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.Principal.dll" />
+            </Component>
+            <Component Id="cmpD773E57C0489505D1E178E17DFD06F8E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil41AECECD349579569044C5910D559784" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Security.SecureString.dll" />
+            </Component>
+            <Component Id="cmpF14707F27F345A9E425B187D69070A08" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filCDACEE1C2A6C84C9F28344C4A6804733" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Text.Encoding.dll" />
+            </Component>
+            <Component Id="cmp2A9B43EB0DD7BC5D4A072C6F280D8718" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7ECFB22D2D3E7452C56E8CC17D7566FA" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Text.Encoding.Extensions.dll" />
+            </Component>
+            <Component Id="cmp17DAE95F6CF3E94EBD958F02F260218B" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7991E48B6CC5FF7750F3AF0EF1AD540E" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Text.RegularExpressions.dll" />
+            </Component>
+            <Component Id="cmpBF900CF13729F3BC606865C81D325FCF" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil4F383C3121B0E02ADBAA3BE99B777399" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.dll" />
+            </Component>
+            <Component Id="cmp0DE421B946BDBEB6E82CCDF837ADD0A3" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil754C319F98EEAE070CF00CD32FFBB88A" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.Overlapped.dll" />
+            </Component>
+            <Component Id="cmpCFC511B8A55647C69B433EBEAFCCFB25" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil030470D7C57036A363B6BF3646D7E297" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.Tasks.dll" />
+            </Component>
+            <Component Id="cmp1664A88C886C05A9B66AAE78F9F7A757" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filECD6F93BC9D2A7A27AD5D871EF886DA2" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.Tasks.Parallel.dll" />
+            </Component>
+            <Component Id="cmp1DB68F3D89A233DEA01F7E239F9C0C12" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filA9D752F4975DB343908A7A7856725A78" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.Thread.dll" />
+            </Component>
+            <Component Id="cmp124CCDCF66CE86357CF313C75F36407E" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil5AD3D1C3D750C7A3783B32546529A3F4" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.ThreadPool.dll" />
+            </Component>
+            <Component Id="cmp173E0645F8DA586A08F65B03C6DE2A3F" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil20FDA0667F869F56FA6001A8B532CD7B" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Threading.Timer.dll" />
+            </Component>
+            <Component Id="cmpA4408EF7FC87F4DE11618E731A350103" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil9183C2CE105514510EB74B59D81AF551" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.ValueTuple.dll" />
+            </Component>
+            <Component Id="cmpB3E4693ECDBE1F3E0BC6D11BE0A15596" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil879B8FAE15C86156F636DB8E5FA8ADBF" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.ReaderWriter.dll" />
+            </Component>
+            <Component Id="cmp6CD0B295606651E9159F56F555FF7C7F" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil5E39C76E629B1FEE36A46C41E875CC0C" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.XDocument.dll" />
+            </Component>
+            <Component Id="cmpEBD5A80D0F1BCA2D7C5072E7FC2F95CB" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filDF83AAE810A33D3E68AED46FF1C4F677" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.XmlDocument.dll" />
+            </Component>
+            <Component Id="cmp662E5CEC966C96A7CDF2292BA25F87A6" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="filD131095684A34727D83D66B0E6D95BEA" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.XmlSerializer.dll" />
+            </Component>
+            <Component Id="cmp693FCB69D39F3C5C5B49A5956C7348DF" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil345849E983D6D40FFF0D44CF98285F7D" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.XPath.dll" />
+            </Component>
+            <Component Id="cmp0E6B27D4FBC2EA9D624C6D0F534C2FEB" Directory="APPLICATIONFOLDER" Guid="*" Win64="no">
+                <File Id="fil7E0824C5E99DD70B0C012AFA26AB62AA" KeyPath="yes" Source="$(var.AudioBookSplitterCmd.TargetDir)\System.Xml.XPath.XDocument.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
