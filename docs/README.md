@@ -3,12 +3,12 @@ Command line to split a mp3 audio book according to its chapters
 
 # Overview
 This tool is based on the [ffprobe executable](https://ffmpeg.org/ffprobe.html) to extract the chapter list of a mp3 file using the following command:
+
 ```ffprobe.exe -v quiet -print_format json -show_chapters -show_format "<source.mp3>"```
 
 ffprobe will return information about chapter start time, end time, ...
 
 Then it used the [ffmpeg](https://ffmpeg.org/ffmpeg.html) to extract each chapter from the source file, based on the start time and duration (end time - start time).
-
 
 
 # Usage
