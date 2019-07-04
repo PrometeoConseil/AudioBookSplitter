@@ -61,6 +61,21 @@ The tool accepts two arguments:
 - the source file: The mp3 file to split.
 - the target folder: the folder where the extracted chapters will be stored.
 
+Used with ```--help``` as argument, it will display usage syntax.
+
+```
+C:\Tools\AudioBookSplitterCmd.exe --help
+AudioBookSplitterCmd 1.1.82.7058
+Copyright © 2019 Prometeo
+
+
+  -s, --Source    Required. MP3 file to split
+  -o, --Output    The folder where the files will be stored.
+  --help          Display this help screen.
+  --version       Display version information.
+```
+
+
 ```
 D:\Tmp>"d:\tools\Prometeo Audiobook splitter\AudioBookSplitterCmd.exe" -s "1 - Hypérion.mp3" -o "d:\tmp\output"
 Extracting 1/18: '01 - Chapter 1' from 'Hypérion'
