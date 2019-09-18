@@ -38,7 +38,7 @@ namespace AudioBookSplitterCmd
                 return;
             }
 
-            var parsedResult = ((Parsed<Options>) result).Value;
+            var parsedResult = ((Parsed<Options>)result).Value;
 
             try
             {
@@ -75,10 +75,51 @@ namespace AudioBookSplitterCmd
                     var serializedOutput = JsonConvert.DeserializeObject<ffprobeOutput.RootObject>(output);
                     var chapters = serializedOutput.Chapters;
                     var formatDescriptions = serializedOutput.Format;
-                    var number = (formatDescriptions.Tags.Disc ?? formatDescriptions.Tags.Date).ToFilePathSafeString();
-                    var folder = $"{formatDescriptions.Tags.AlbumArtist.ToFilePathSafeString()}\\{formatDescriptions.Tags.Album.ToFilePathSafeString()}\\{number} - {formatDescriptions.Tags.Title.ToFilePathSafeString()}";
+                    var number = string.Empty;
+                    try
+                    {
+                        number = (formatDescriptions.Tags.Disc ?? formatDescriptions.Tags.Date).ToFilePathSafeString();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine($"[WARN] FAILED to format track number '{(formatDescriptions.Tags.Disc ?? formatDescriptions.Tags.Date)}' as a valid file path part.");
+                    }
+
+                    var folder = string.Empty;
+
+
                     if (parsedResult.PreferShortTargetFolder)
+                    {
                         folder = "";
+                    }
+                    else
+                    {
+                        try
+                        {
+                            folder = $"{formatDescriptions.Tags.AlbumArtist.ToFilePathSafeString()}";
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine($"[WARN] FAILED to format album artist '{formatDescriptions.Tags.AlbumArtist}' as a valid file path part.");
+                        }
+
+                        try
+                        {
+                            folder += $"\\{formatDescriptions.Tags.Album.ToFilePathSafeString()}";
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine($"[WARN] FAILED to format album  '{formatDescriptions.Tags.Album}' as a valid file path part.");
+                        }
+                        try
+                        {
+                            folder += $"\\{(number == null ? "" : number + " - ")}{formatDescriptions.Tags.Title.ToFilePathSafeString()}";
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine($"[WARN] FAILED to format title '{formatDescriptions.Tags.Title}' as a valid file path part.");
+                        }
+                    }
 
                     if (!string.IsNullOrEmpty(parsedResult.OutputFolder))
                     {
@@ -94,7 +135,7 @@ namespace AudioBookSplitterCmd
                         track++;
                         Console.WriteLine($"Trying to create \"{track:D2} - {chapter.Tags.Title}.mp3\" into folder \"{folder}\"");
                         var target = Path.Combine(folder, $"{track:D2} - {chapter.Tags.Title}.mp3".ToFilePathSafeString());
-                        
+
                         // remove existing file
                         if (File.Exists(target))
                             File.Delete(target);
@@ -119,7 +160,7 @@ namespace AudioBookSplitterCmd
                                 FileName = "ffmpeg.exe",
                                 Arguments = arguments
                             }
-                        };                       
+                        };
                         pExtract.Start();
                         // wait for end of extraction.                    
                         pExtract.WaitForExit();
@@ -157,6 +198,6 @@ namespace AudioBookSplitterCmd
             nHelpText.AddOptions(result);
             return HelpText.DefaultParsingErrorsHandler(result, nHelpText);
         }
-       
+
     }
 }
