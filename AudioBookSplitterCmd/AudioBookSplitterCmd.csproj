@@ -61,7 +61,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Humanizer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e">
-      <HintPath>..\packages\Humanizer.Core.3.0.1\lib\netstandard2.0\Humanizer.dll</HintPath>
+      <HintPath>..\packages\Humanizer.Core.3.0.10\lib\netstandard2.0\Humanizer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
